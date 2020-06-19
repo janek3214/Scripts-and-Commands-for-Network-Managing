@@ -1,0 +1,8 @@
+SSH Tool - Putty/MobaXterm XServer 
+Text Editing - VS Code/Notepad++
+
+
+Powershell commands - 
+
+//Scan the 192.168.0.x/24 network and show arp table 
+1..254 | foreach-object { ping 192.168.0.$_ -n 1 -w 30 }; arp -a
