@@ -6,3 +6,21 @@ Powershell commands -
 
 //Scan the 192.168.0.x/24 network and show arp table 
 1..254 | foreach-object { ping 192.168.0.$_ -n 1 -w 30 }; arp -a
+
+
+
+
+Unfi Controller Manual Upgrade on Pi
+
+Go to https://www.ui.com/download/unifi
+Click to download the newest verision of the controller and get Direct Link 
+
+SSH into Pi
+
+Type:
+sudo apt-get update
+sudo apt-get upgrade
+
+Once done wget https://dl.ubnt.com/unifi/5.x.xx/unifi_sysvinit_all.deb
+
+Once downloaded sudo dpkg -i unifi_sysvinit_all.deb
