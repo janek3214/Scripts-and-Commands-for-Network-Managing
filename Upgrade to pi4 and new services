@@ -1,0 +1,8 @@
+Actions to Take: 
+
+1. Create back-up of UniFi Controller on pi3
+2. Setup new pi and install docket
+3. Create Container for UniFi and setup.
+4. Create Container for Plex
+5. Create Container for Homeassistant
+6. Create Container for PiHole or Ad Guard
