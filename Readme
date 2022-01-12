@@ -12,15 +12,44 @@ Powershell commands -
 
 Unfi Controller Manual Upgrade on Pi
 
+Download RaspberryPi OS Lite (No Desktop Interface as not needed)
+
+Use rufus and create and Image on MicroSD Card
+
+Once image has been created create SSH file using txt shortcut but delete the file extension. 
+
+Once install complete insert the MicroSD Card to Pi and boot the device.
+
+Check the IP of the device (This should show in ARP table as Raspberry Pi Foundation 
+
+Use Putty to SSH into the device. 
+
+Standard username and password
+  U - pi
+  P - raspberry
+
+Once you are logged into the Pi change the standard password to something more secure.
+
+Use command:
+
+  passwd
+
+Once password has been changed install any updates:
+
+  sudo apt-get update
+  sudo apt-get upgrade
+
+Once this has completed install Java 8, Haveged, and MongoDB
+  sudo apt install openjdk-8-jre-headless jsvc libcommons-daemon-java -y
+  sudo apt install haveged -y
+  sudo apt install mongodb-server mongodb-clients -y
+
+
+When this completes it is now time to install UniFi controller.
 Go to https://www.ui.com/download/unifi
 Click to download the newest verision of the controller and get Direct Link 
-
-SSH into Pi
-
-Type:
-sudo apt-get update
-sudo apt-get upgrade
-
-Once done wget https://dl.ubnt.com/unifi/5.x.xx/unifi_sysvinit_all.deb
+Once done wget https://dl.ubnt.com/unifi/6.x.xx/unifi_sysvinit_all.deb
 
 Once downloaded sudo dpkg -i unifi_sysvinit_all.deb
+
+
